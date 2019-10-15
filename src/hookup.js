@@ -6,7 +6,7 @@ window.onload = function(){
   var down = $('button.down-btn');
   var reset = $('button.reset-btn');
   var switchBtn = $('button.switch-btn');
-  var cardClass = $('div.card');
+  var cardClass = $('div.power-usage');
 
   up.on('click', function(){
     upButton();
@@ -49,6 +49,7 @@ window.onload = function(){
 
   switchButton = function() {
     thermostat.switchSavingMode();
+    setSwitchButton();
   }
 
   setUsageColour = function(){
@@ -68,8 +69,17 @@ window.onload = function(){
     };
   };
 
+  setSwitchButton = function() {
+    if (thermostat.isSavingMode()) {
+      switchBtn.addClass('btn-success')
+      switchBtn.removeClass('btn-dark')
+    } else {
+      switchBtn.removeClass('btn-success')
+      switchBtn.addClass('btn-dark')
+    }
+  }
 
-
+  setSwitchButton();
   setUsageColour();
   setTemperature();
 };

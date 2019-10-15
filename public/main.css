@@ -1,3 +1,53 @@
-.low-usage {
-  
+.card {
+  border-radius: 30px;
+  background: darkgrey;
+}
+
+.middle {
+  padding-top: 30vh;
+  width: 30vw;
+}
+
+.display{
+  border-radius: 20px;
+}
+.display-div {
+  padding-top: 0.5em;
+}
+
+.display-text {
+  font-size: 5em;
+  align-self: center;
+}
+
+.pwr-btn {
+  padding: 9%;
+  font-size: 1em;
+}
+
+.up-btn {
+  width: 90%;
+  font-size: 1.5em;
+}
+
+.down-btn {
+  width: 90%;
+  font-size: 1.5em;
+}
+
+.button {
+  padding: 5%;
+}
+
+.reset-btn {
+  padding: 13%;
+  font-size: 2em;
+}
+
+.padding-top {
+  padding-top: 1.5em;
+}
+
+.btn-top-pad {
+  padding-top: 0.3em;
 }
