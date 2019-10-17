@@ -1,6 +1,8 @@
 (function(exports){
-  function thermostatController(upButton, downButton, powerButton, resetButton, thermostatModel, thermostatView) {
+  function ThermostatController(upButton, downButton, powerButton, resetButton, thermostatModel, thermostatView) {
     this._upButton = upButton
+    console.log('inside controller')
+    console.log(this._upButton)
     this._downButton = downButton
     this._resetButton = resetButton
     this._powerButton = powerButton
@@ -8,12 +10,13 @@
     this._thermostatView = thermostatView;
     
     this._setupButtontoAction();
+    this._updateThermostatView(this._thermostatModel.temp)
   }
-  
-  thermostatController.prototype = {
+  ThermostatController.prototype = {
     _setupButtontoAction: function() {
       var self = this
       this._upButton.click(function() {
+        console.log("click detected")
         var temp = self._thermostatModel.up();
         if (temp) {self._updateThermostatView(temp)}
       })
@@ -40,5 +43,5 @@
     }
   }
 
-  exports.thermostatController = thermostatController
+  exports.ThermostatController = ThermostatController
 })(this);

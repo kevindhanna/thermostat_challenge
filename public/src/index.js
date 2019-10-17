@@ -9,7 +9,7 @@
 
     model = new thermostatModel()
 
-    new thermostatController(upButton,
+    new ThermostatController(upButton,
                             downButton,
                             powerButton,
                             resetButton,

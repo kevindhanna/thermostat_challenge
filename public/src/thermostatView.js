@@ -7,7 +7,6 @@
 
   thermostatView.prototype = {
     _setCardColour: function(energyUsage) {
-      console.log(`energy usage in view set colour = ${energyUsage}`)
       var card = this._powerCard
       if (energyUsage === 'low-usage') {
         card.removeClass('bg-danger')
