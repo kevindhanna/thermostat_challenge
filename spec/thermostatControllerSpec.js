@@ -39,8 +39,6 @@ describe('ThermostatController', function() {
 
   describe('clicking up button', function(){
     it("should allow a button click to update thermostat model", function() {
-      console.log('inside test')
-      console.log(upButtonMock)
       upButtonMock.trigger('click')
       expect(thermostatModelMock.up).toHaveBeenCalledWith();
     })

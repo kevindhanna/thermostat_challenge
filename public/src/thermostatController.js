@@ -1,8 +1,6 @@
 (function(exports){
   function ThermostatController(upButton, downButton, powerButton, resetButton, thermostatModel, thermostatView) {
     this._upButton = upButton
-    console.log('inside controller')
-    console.log(this._upButton)
     this._downButton = downButton
     this._resetButton = resetButton
     this._powerButton = powerButton
@@ -16,7 +14,6 @@
     _setupButtontoAction: function() {
       var self = this
       this._upButton.click(function() {
-        console.log("click detected")
         var temp = self._thermostatModel.up();
         if (temp) {self._updateThermostatView(temp)}
       })
@@ -41,6 +38,9 @@
     _updateThermostatViewPowerButton: function(value) {
       this._thermostatView.updatePowerButton(value)
     }
+  }
+  myFunction = function(){
+    return 1
   }
 
   exports.ThermostatController = ThermostatController
