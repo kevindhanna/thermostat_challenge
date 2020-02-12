@@ -5,7 +5,6 @@ describe('WeatherView', function() {
     cityMock = {text: function(){console.log('city called')}}
     minMock = {text: function(){console.log('min called')}}
     maxMock = {text: function(){console.log('max called')}}
-    spyOn(cityMock, 'text')
     spyOn(minMock, 'text')
     spyOn(maxMock, 'text')
     weatherView = new WeatherView(cityMock, minMock, maxMock)

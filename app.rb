@@ -1,6 +1,7 @@
 require 'sinatra'
 
 class Thermostat < Sinatra::Base
+  # enable: sessions
 
   get '/' do
     "hello world"
